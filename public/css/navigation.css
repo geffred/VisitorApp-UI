@@ -1,0 +1,137 @@
+/******************nav**************************/
+
+#btn-active{
+   
+    color: #ff7700ee;
+  
+}
+
+.visibleNav{
+
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+.hideNav{
+    visibility: hidden;
+}
+
+nav{
+
+    display: flex;
+    align-items: center;
+    font-family: calibri;
+    background: rgb(255, 255, 255);
+    box-shadow: 0px 0px 1px rgba(128, 128, 128, 0.315);
+    
+}
+
+/******************logoSection**************************/
+nav .logoSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid rgba(186, 186, 186, 0.171);
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background: #1a1a1a;
+    color: rgba(255, 255, 255, 0.76);
+   
+}
+
+nav .logoSection img{
+    transform: translateY(2px);
+    margin-right: 5px;
+    animation: flow 1s ease 0s infinite alternate;
+}
+
+nav .logoSection:hover{
+    color: #ffffff;
+}
+
+/* animation de notre logo */
+
+@keyframes flow {
+    from {
+        transform: translate(0);
+    }
+    to{
+        transform: translate(10);
+    }
+    
+}
+/******************linkSection**************************/
+nav .linkSection{
+    padding-left: 1.5em;
+   
+}
+nav .linkSection a{
+    display: inline-block;
+    margin: 0px 1em;
+    color: rgba(88, 88, 88, 0.589);
+    position: relative;
+}
+
+nav .linkSection a::after{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: #ff7700ee;
+    transition: transform .5s ease;
+}
+
+nav .linkSection a:hover{
+    color: #ff7700;
+  
+}
+nav .linkSection a:hover::after{
+    transform: scaleX(1);
+}
+/******************startSection**************************/
+nav .startSection{
+    display: flex;
+    justify-content: end;
+}
+nav .startSection a{
+
+    color: white;
+    display: inline-block;
+    padding: .5em 2.5em;
+    border-radius: 5px;
+    background:#ff7700ee;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+nav .startSection a:hover{
+    background:transparent;
+    border: 1px solid #ff7700ee;
+    color:  #ff7700ee;
+}
+
+/* taille d'écran à 600px */
+@media screen and (max-width:600px){
+    
+}
+
+
+@media screen and (max-width:590px) {
+    .linkSection{
+        display: none;
+    }
+
+    nav .logoSection{
+        border-right: none;
+        justify-content: start;
+        padding: 10px 15px;
+    }
+    nav .startSection a{
+        padding: .2em 1em;
+    }
+    
+}

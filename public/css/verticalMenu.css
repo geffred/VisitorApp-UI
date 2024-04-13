@@ -1,0 +1,115 @@
+.visibleMenu{
+
+    position:fixed;
+   
+}
+
+.hideMenu{
+    visibility: hidden;
+}
+
+
+/*on accède au menu lateral*/
+.verticalMenu{
+   
+    height: 100%;
+    background:rgb(30, 30, 30);
+    font-family: calibri;
+    padding: 0px;
+    color: white;
+    
+ 
+}
+/*on aligne verticalement les éléments du menu */
+.verticalMenu > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+  
+    padding: 0px;
+}
+
+.verticalMenu > ul >li:not(.verticalMenu > ul >li:first-child):hover{
+
+    background: rgba(255, 255, 255, 0.011);
+}
+.verticalMenu > ul >li:last-child{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.096);
+}
+.verticalMenu > ul >li:not(.verticalMenu > ul >li:first-child){
+    border-top: 1px solid rgba(255, 255, 255, 0.096);
+}
+.verticalMenu > ul >li{
+   
+    padding: 1em .8em;
+}
+
+/*on accede aux grand titre*/
+.verticalMenu > ul > li > a,img{
+    color: rgb(255, 255, 255);
+    opacity: .5;
+}
+/*lorsque l'on survole les li on met les balise a en black claire */
+.verticalMenu > ul > li:hover > a:first-child,img{
+    opacity: 1;
+}
+/*on cache les sour liste ul*/
+.verticalMenu ul li ul{
+    display: none;
+    transition: all 1s ease;
+}
+/*on affiche les sous liste ul au survole de li */
+.verticalMenu ul > li:hover > ul{
+    transition: all 1s ease;
+    list-style-type:decimal;
+    display: block;
+}
+/*on accède au lien a de la du second ul */
+.verticalMenu ul  li  ul  li a{
+    position: relative;
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.493);
+}
+/*on définit une ligne en desous les elements de la sous liste ul*/
+.verticalMenu ul > li > ul > li > a::after{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: #ff7700ee;
+    transition: transform .5s ease;
+    border-radius: 5px;
+}
+/*on l'anime avec un transform scale au survol*/
+.verticalMenu ul > li > ul > li > a:hover::after{
+  transform: scaleX(1);
+}
+/*On anime aussi aussi la couleur en mettant en orange*/
+.verticalMenu ul > li > ul > li > a:hover{
+    color: #ff7700ee;
+  }
+
+
+  /*********************Le footer ********************/
+  footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: .7em;
+    opacity: .4;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    
+  }
+
+  .docs{
+    cursor: pointer;
+    color: orange;
+  }
+

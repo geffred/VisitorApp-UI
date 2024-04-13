@@ -1,0 +1,359 @@
+
+.section .row{
+
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.section .row > div:first-child{
+    display: flex;
+    justify-content: center;
+}
+
+.section{
+    margin: 0px auto;
+}
+
+.section .row a{
+
+    color: white;
+    display: inline-block;
+    padding: .5em 2.5em;
+    border-radius: 5px;
+    background:#ff7700ee;
+    border: 1px solid transparent;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-family: calibri;
+   
+}
+
+.section .row a:hover{
+    background:transparent;
+    border: 1px solid #ff7700ee;
+    color:  #ff7700ee;
+}
+
+.section .row img{
+    max-width: 180px;
+    margin: 0px;
+   
+}
+
+#line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+}
+
+.section p{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px;
+    border: 1px solid silver;
+    border-radius: 5px;
+    font-family: calibri;
+    width: 80%;
+    margin: 0px auto;
+    background: rgba(255, 255, 255, 0.144);
+    color: rgb(95, 95, 95);
+}
+
+@media screen and (max-width:575px) {
+    .section .row a{
+        font-size: .7em;
+    }
+
+   
+}
+
+#list ul , #list ul li{
+    margin: 0px ;
+    padding: 0px;
+}
+
+#list ul li{
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+    min-height: 200px;
+    padding-top:2em ;
+    padding-bottom: 2em;
+    position: relative;
+    font-size: .9em;
+    font-family: calibri;
+    transition: color 0s linear;
+   
+}
+
+#list ul li::after{
+    content: "";
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    border: .5 solid transparent;
+    background: rgba(180, 180, 180, 0.126);
+    border-radius: 5px;
+    z-index: -1;
+    transition: background .2s ease;
+
+}
+
+#list ul li:hover::after{
+
+    background: #ffffff00;
+    border: .5px solid rgba(53, 53, 53, 0.742);
+    
+}
+
+
+
+#list span{
+    display: block;
+}
+
+#list ul li .link{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#list ul li .link button{
+    margin: 2px auto;
+    padding: 5px 4px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background:  #191919ee;
+    color: white;
+    width: 80%;
+}
+
+#list ul li .link button:hover{
+    background: transparent;
+    border: 1px solid  #191919ee;
+    color:  #191919ee;
+}
+
+.colorName{
+    color:  #000000;
+    font-weight: bolder;
+    text-transform: uppercase;
+    
+}
+
+.visitor button{
+    color: white;
+    padding: .5em 2.5em;
+    border-radius: 5px;
+    background:#ff7700ee;
+    border: 1px solid transparent;
+    margin: 4px 2px;
+}
+
+.visitor .active{
+    background-color: transparent;
+    color:#ff7700ee ;
+    border: .5px solid #ff7700ee;
+}
+
+.visitor button:hover{
+    background: transparent;
+    color: #ff7700ee;
+    border: 1px solid #ff7700ee;
+}
+
+.item-group .colorName{
+
+    font-size: .7em;
+    color: white;
+    text-transform: lowercase;
+}
+
+.firstName{
+
+    color: #878787;
+    font-style: italic;
+}
+
+.compagny{
+    border: 1px solid rgb(133, 133, 133);
+    background: transparent;
+    border-radius: 10px;
+    width: 60%;
+    margin: 0px auto;
+    color: rgb(74, 74, 74);
+}
+
+.item-group {
+    width: 80%;
+    margin: 0px auto;
+    border-radius: 5px;
+    background: #191919ee;
+    padding: 10px 0px;
+    cursor: default;
+    border: .5px solid white;
+
+   
+   
+}
+
+.item-group span::first-letter{
+    text-transform: uppercase;
+}
+
+.item-group span:first-child{
+   color: #ff7700ee;
+   
+}
+
+.section .box:after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(48, 48, 48);
+    transform: translateY(40%) scaleX(300%) rotate(-20deg);
+    transition: transform .5s ease;
+    z-index: 1;
+
+}
+.section .box{
+    position: relative;
+    overflow: hidden;
+    max-width: 180px;
+    min-height: 230px;
+    display: flex;
+    border: .5px solid  #8585854d;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    font-family: calibri;
+    background-color: rgba(255, 255, 255, 0.192);
+    box-shadow: 0px 0px 5px rgba(192, 192, 192, 0.215);
+    padding: 10px;
+    margin: 0px auto;
+    cursor: pointer;
+    margin-top: 10px;
+    color:rgba(255, 255, 255, 0.614);
+  
+}
+
+.section .box:hover::after{
+    transform: translateY(0%);
+}
+
+.section .box div{
+    margin-top: 1em;
+    font-weight: bold;
+  
+}
+.section .box img{
+    filter: drop-shadow(0px 0px 0px rgba(255, 178, 35, 0.895));
+    transform: scale(0px);
+    transition: filter .5s ease , transform .5s ease;
+}
+.section .box:hover img{
+    filter: drop-shadow(0px 0px 10px rgba(255, 178, 35, 0.895));
+}
+
+.section .box:active img{
+    transform: scale(.5);
+}
+
+.section .box div,img,span{
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.section .box span{
+
+    font-size: .6em;
+}
+
+.section .SectionTitle span{
+    display: inline-block;
+    padding: 5px 20px;
+    background: rgba(46, 46, 46, 0.091);
+    color: rgb(90, 90, 90);
+    border-radius: 2px;
+    text-align: center;
+    font-size: .8em;
+    border: .5px solid rgba(0, 0, 0, 0.45);
+    
+}
+
+.bg2{
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    
+}
+
+.about {
+   
+    height:10em;
+    background: rgba(30, 30, 30, 0.646);
+    color: white;
+    background: url("/public/img/about.jpg");
+    background-size: cover;
+    padding: 0px;
+    
+    
+}
+.about .line1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.about .line1 div{
+    display: inline-block;
+    margin: 50px auto;
+    padding: .8em 1.5em;
+    background: rgba(40, 40, 40, 0.425);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: .6em;
+    
+   
+}
+
+.manuel .row p{
+    text-align: justify;
+}
+.manuel .row h5{
+    font-family: calibri;
+    font-weight: bold;
+    color:rgb(23, 23, 23);
+    text-align: center;
+    opacity: .6;
+}
+.manuel .row p em{
+    color: purple;
+}
+
+.manuel .row .col-12{
+    border-right: 1px solid rgba(0, 0, 0, 0.071);
+}
+
+
+
+
+
+
+
+

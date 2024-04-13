@@ -1,0 +1,181 @@
+ .register h1, form{
+    max-width: 500px;
+    margin: 0px auto;
+    padding-bottom: 50px;
+}
+
+.register h1{
+
+    text-align: center;
+    font-size: 1em;
+    font-family: calibri;
+    margin-top: 20px;
+    color: #ff9429ef;
+    position: relative;
+    padding: 5px 0px;
+    display: block;
+    opacity: .8;
+    margin-bottom: 20px;
+   
+   
+}
+
+.register{
+    margin: 0px auto;
+}
+
+
+.register img{
+    margin-right: 10px;
+  
+}
+
+.register h1::before{
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background:#ffa41b;;
+    bottom: 0px ;
+    left: 0px;
+    transform: scaleX(.1);
+    animation: swip 2s ease 0s infinite alternate;
+}
+
+@keyframes swip{
+    from{
+        transform: scaleX(.05);
+    }
+    to{
+        transform: scaleX(.3);
+    }
+    
+}
+
+.register form{
+    font-family: calibri;
+}
+.register form label{
+    opacity: .8;
+}
+.register  form button{
+    color: white;
+    padding: .5em 2.5em;
+    border-radius: 5px;
+    background:#ff7700ee;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.register form #companyName,#firstName,#lastName,#email,#phoneNumber,#visitor,#date,#plannedArrivalTime,#plannedDuration,#employee
+{
+    background: rgba(192, 192, 192, 0.29);
+    border: none;
+    box-shadow:none ;
+    outline: none;
+    transition: all .1s ease;
+    margin-bottom: .5em;
+   
+}
+ .register form #companyName:focus{
+    background:#00000013;
+}
+ .register form #lastName:focus{
+    background:#00000013;
+}
+ .register form #firstName:focus{
+    background:#00000013;
+}
+ .register form #email:focus{
+    background:#00000013;
+}
+ .register form #phoneNumber:focus{
+    background:#00000013;
+}
+ .register form #visitor:focus{
+    background:#00000013;
+}
+
+
+ .register form #plannedArrivalTime:focus{
+    background:#00000013;
+}
+ .register form #plannedDuration:focus{
+    background:#00000013;
+}
+ .register form #date:focus{
+    background:#00000013;
+}
+
+
+ .register form button:hover{
+    background:transparent;
+    border: 1px solid #ff7700ee;
+    color:  #ff7700ee;
+}
+
+
+
+
+
+
+
+#searchRegister form input
+{
+    background: rgba(192, 192, 192, 0.094);
+    border: none;
+    box-shadow:none ;
+    outline: none;
+    transition: all .1s ease;
+    margin-bottom: .5em;
+   
+}
+
+#searchRegister form {
+    padding: 0px;
+    padding: 0px;
+    margin-top: 1em;
+}
+
+
+
+#searchRegister form button{
+    color: white;
+    padding: .3em 1em;
+    border-radius: 5px;
+    background:#ff7700ee;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+#searchRegister  form button:hover{
+    background:transparent;
+    border: 1px solid #ff7700ee;
+    color:  #ff7700ee;
+}
+
+.visitMenu button{
+    color: white;
+    padding: .3em 1em;
+    border-radius: 5px;
+    background:#ff7700ee;
+    border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.alert-success{
+    border-color: #23232389;
+    background: transparent;
+    color: #2a2a2aee;
+    text-align: center;
+}
+
+.visible{
+    transition: all .5s;
+    opacity: 1;
+}
+
+.hide{
+    opacity: 0;
+    transition: all .5s;
+}
